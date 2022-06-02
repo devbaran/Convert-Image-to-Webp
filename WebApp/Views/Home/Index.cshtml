@@ -1,0 +1,20 @@
+﻿@model WebApp.Models.Images
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form method="post" enctype="multipart/form-data">
+    <h3>Upload Image</h3>
+    <hr />
+    <input name="image" type="file" />
+    <br />
+    <br />
+    <input type="submit" value="Upload" />
+</form>
+
+@if (Model != null)
+{
+    <picture style="height:50vh;">
+        <source srcset="@Model.WebPImage" type="image/webp" />
+        <img src="@Model.NormalImage" style="height:50vh;" alt="Not Found" />
+    </picture>
+}
