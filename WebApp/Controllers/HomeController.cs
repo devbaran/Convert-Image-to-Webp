@@ -49,7 +49,7 @@ namespace WebApp.Controllers
                 //Save original file to local path.
                 image.CopyTo(fileStream);
 
-                //Convert webp from local path, and save it same path with diffrent extension.
+                //Convert file in local path(original image) to webp and save it same path with diffrent extension.
                 SaveWebp(50, webPImagePath, normalImagePath);
             }
 
